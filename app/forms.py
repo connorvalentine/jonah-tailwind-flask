@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
-from wtforms import PasswordField, StringField, SubmitField, BooleanField
-from wtforms.validators import DataRequired, Email
+from wtforms import StringField, SubmitField
+from wtforms.validators import DataRequired
 
 ''' DOCUMENTATION: 
 
@@ -18,5 +18,3 @@ class BetaSignUpForm(FlaskForm):
     email = StringField('email', validators=[
             DataRequired()])
     submit = SubmitField("Add me to the Beta waitlist")
-
-    
