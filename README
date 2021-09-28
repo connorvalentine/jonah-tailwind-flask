@@ -1,0 +1,27 @@
+## How to start the website up
+
+## download Github App 
+
+## Clone the Github Repository 
+- copy and paste the clone link into the app
+- pull any changes to see
+
+## download python
+ - install it wherever it recommends
+
+## download VSCode
+  - Code Runner
+  - CSS Formatter
+  - Headwind (helps you sort tailwind classes in order automatically)
+  - Tailwind CSS IntelliSense (useful for tailwind options)
+  - Material Icon Theme (code in style)
+  - Dracula Official (code in style)
+
+## Create your virtual environment
+
+## Install the required python packages
+
+## install tailwind.css 
+
+## 
+

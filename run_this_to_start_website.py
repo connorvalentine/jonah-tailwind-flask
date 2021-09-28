@@ -1,23 +1,22 @@
+# Python packages we need for this script:
 from flask import Flask
-from flask import render_template
-from flask import flash
-from app.flask_app_pages import server_bp
-'''Imports from our repo '''
 
+# Import from subfolders:
+from app.flask_app_pages import page1_bp
 
+ # this is used to intialize flask.
 class BaseConfig:
-    # this is used to intialize flask.
-    # SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SECRET_KEY = 'Some-secret-here...'
 
-# This section is the creation of the flask app which will route the users to the dash apps
+# This section is the creation of the flask application and server where it lives
 server = Flask(__name__, template_folder='app/templates', static_url_path="/app/static", static_folder='app/static')
 server.config.from_object(BaseConfig)
 
-# add the flask pages 
-server.register_blueprint(server_bp)
+# add the flask html files in templates folder to the site (called blueprints)
+server.register_blueprint(page1_bp)
 
 
+# If this python script is the main one being run, start the server.
 if __name__ == "__main__":
     server.run(debug=True)
