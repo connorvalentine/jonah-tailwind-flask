@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title> Raposa </title> 
+	 
+	<!-- Pull in the custom tailwind stylesheet that only has the classes we will use -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='tailwind.css') }}">
+
+	<!-- Now we download the fonts we want to use, this method pulls in different weights that are suitable for tailwind -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap" rel="stylesheet">
+
+	<!-- Now we add a favicon so our page doesn't look generic-->
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+
+	<!-- Use this link for troubleshooting, it just pulls a generic tailwins styling sheet from the web. Some features won't work -->
+	<!-- <!link href="https://unpkg.com/tailwindcss@1.0.4/dist/tailwind.min.css" rel="stylesheet">  -->
+</head>
+
+<body class="items-center justify-center h-screen overflow-x-hidden overflow-y-auto bg-left-top bg-no-repeat bg-green sm:flex"
+	style="background-image: url({{url_for('static', filename='images/squares-pattern-2.png') }});">
+	
+	<!--Adding some background flair-->
+	<div class= 'absolute z-0 left-5 top-20'>
+		<img src="{{url_for('static', filename='images/icon-fundamentals1.svg')}}"
+			class="object-scale-down ">
+	</div>
+	<!-- <p>
+		{{ url_for('static', filename='images/favicon.ico') }}
+	</p> -->
+
+	<div class= 'absolute z-0 right-5 top-3'>
+		<img src="{{url_for('static', filename='images/icon-fundamentals2.svg')}}"
+			class="object-scale-down h-10 sm:h-auto">
+	</div>
+
+	<!-- This is the main grid of the content -->
+	<div class = 'absolute top-0 z-10 grid w-full grid-cols-2 h-5/6'>
+		<!-- Row (it is really two columns spanned together) -->
+		<!-- The logo -->
+		<div class= 'z-10 flex items-start justify-start col-span-2 sm:justify-center m-2' >
+			<!--Adding logo to the top of the page-->
+			<img src="{{url_for('static', filename='images/logo raposa.svg')}}"
+				class="object-scale-down w-1/2 h-auto max-h-24 ">
+		</div>
+
+		<!-- Col This is one of the white squares-->
+		<div class="z-10 w-10/12 col-span-2 mx-4 mb-5 md:mx-12 sm:col-span-1 md:w-9/12 lg:w-8/12 bg-green-light justify-self-center md:justify-self-end">
+				<h3 class="py-4 mx-1 text-2xl font-bold text-center font-sans">
+					No-Code Backtest Demo
+				</h3>
+				<div class="flex justify-center w-full">
+					<img src="{{url_for('static', filename='images/demo.png')}}"
+						class="object-scale-down w-10/12 border-2 border-orange sm:w-9/12">
+				</div>
+				<div class="flex justify-center pt-6 text-center">
+					<a href="/demo/home"
+						class="w-10/12 px-2 py-1 font-mono font-bold text-white border-black rounded-full shadow-md bg-purple hover:bg-orange focus:outline-none focus:shadow-outline">
+						Take me to the Demo
+					</a>
+				</div>
+				<h5 class="my-3 font-mono text-lg font-medium text-center text-orange">
+					Now with more Buttons!
+				</h5>
+		</div>
+		
+		<!-- Col This is one of the white squares-->
+		<div class="z-10 w-10/12 col-span-2 mx-4 mb-5 md:mx-12 sm:col-span-1 md:w-9/12 lg:w-8/12 bg-green-light justify-self-center md:justify-self-start">
+			<h3 class="py-4 text-2xl font-bold text-center font-sans ">
+				Raposa Beta Test
+			</h3>
+			<div class="pt-5 mx-8 bg-gray-200 rounded border-purple">
+				<div class="py-3 bg-orange">
+					<h3 class="font-semibold text-center text-white font-sans text-md">
+						Under Construction
+					</h3>
+				</div>
+				<div class = 'flex '>
+
+					<div class="py-1 ml-2 w-10/12 ">
+						<dl>
+							<dd class="font-mono text-left text-md"> - Unlimited Backtests </dd>
+							<dd class="font-mono text-left text-md"> - More stocks </dd>
+							<dd class="font-mono text-left text-md"> - Receive live updates on your
+								strategy !  </dd>
+						</dl>
+					</div>
+					<!-- float this image to the right, text will wrape -->
+					<div class= " w-2/12  relative " >
+						<img src="{{url_for('static', filename='images/icon_75_spinner.svg')}}"
+							class="absolute bottom-0 right-0 pb-2 pr-2">
+					</div>
+				</div>
+
+			</div>
+			<div class="mx-8 my-4">
+				<form method= "post">
+					<div class="mb-1 text-center justify-text-center">
+						{{ form.csrf_token }} <! this is necessary for form validation >
+						{{ form.email(
+							class = "w-9/12 px-3 py-2 mb-3 font-mono text-sm leading-tight bg-white border-2 rounded shadow-md appearance-none border-purple focus:outline-none focus:shadow-outline",
+							placeholder="Email")
+							}}
+					</div>
+					<div class="text-center justify-text-center">
+						{{ form.submit(
+							class="w-full px-2 py-1 font-mono font-bold text-white border-4 border-black rounded-full shadow-md bg-purple hover:bg-orange focus:outline-none focus:shadow-outline")
+							}}
+					</div>
+				</form>
+				<div class="text-center justify-text-center">
+					{% if form.email.errors %}
+						<ul>
+						{% for error in form.email.errors %}
+							<li class="mt-3 font-mono text-center text-gray-700 bg-red-300 rounded text-sm-center">
+								{{ error }}
+							</li>
+						{% endfor %}
+						</ul>
+					{% endif %}
+				</div>
+				<div class="text-center justify-text-center">
+					{% with messages = get_flashed_messages() %}
+						{% if messages %}
+								{% for message in messages %}
+								<div>
+									<h5 class="mt-3 font-mono text-lg text-center text-gray-700">
+										{{ message }}
+									</h5>
+								</div>
+								{% endfor %}
+
+						{% endif %}
+					{% endwith %}
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
