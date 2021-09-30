@@ -5,7 +5,7 @@
 // This is something you do before hosting the website on a server because it will run faster. But while you are just using this for personal use dont worry about it.
 module.exports = {
   // mode: 'jit',   // This will remove all unused styles from the tailwind.css sheet in static/css/tailwind.css file. Comment out for dev environment
-  // purge: ['./templates/**/*.html'],
+  // purge: ['app/templates/**/*.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     }

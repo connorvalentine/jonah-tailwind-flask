@@ -1,15 +1,21 @@
 ## How to start the website up
 
 ## download Github App 
+ - https://desktop.github.com/
 
 ## Clone the Github Repository 
-- copy and paste the clone link into the app
+- https://github.com/connorvalentine/tailwind-flask
+- go to this link, click the green code button, copy and paste the clone link into the app
 - pull any changes to see
 
 ## download python
  - install it wherever it recommends
+ - https://www.python.org/downloads/
 
 ## download VSCode
+  - https://code.visualstudio.com/download 
+
+## download VSCode extensions from the extensions tab
   - Code Runner
   - CSS Formatter
   - Headwind (helps you sort tailwind classes in order automatically)
@@ -17,11 +23,29 @@
   - Material Icon Theme (code in style)
   - Dracula Official (code in style)
 
-## Create your virtual environment
+## Create your virtual environment 
+All instructions from here : https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment 
+ - open up a new terminal in VSCode
+ - change directory to the github folder (tailwind-flask)
+ - into the terminal run the follwing commands while you are in the tailwind-flask folder: 
 
-## Install the required python packages
+ 1. python3 -m venv env 
+    - this creates a clean env folder. It will make a copy of python here that we will use only for this project
+ 2. source env/bin/activate
+    - we tell vscode that all python commands will be for our env folder now
+ 3. python3 -m pip install -r requirements.txt
+    -  I made a requirements.txt file which we can use to tell python the EXACT packages (add ons) that need to be installed into our python env folder. This way everyone on the team is running exactly the same software. It works nicely.
+
+- you are now ready to run python for this project :)
 
 ## install tailwind.css 
+ - you actually don't need to do this right now because I included the full tailwind in our gtihub repo.
+ - first install npm. Which is something I dont really know what it is. Its kinda like pip, but for javascript things. 
+
+ npm install -g npm
+
+ Now follow the directions in tailwindREADME to get a full copy of tailwind on your machine
+https://tailwindcomponents.com/cheatsheet/
 
 ## 
 

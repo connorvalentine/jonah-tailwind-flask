@@ -2,7 +2,7 @@
 from flask import Flask
 
 # Import from subfolders:
-from app.flask_app_pages import page1_bp
+from app.flask_app_pages import jonah_app
 
  # this is used to intialize flask.
 class BaseConfig:
@@ -14,7 +14,7 @@ server = Flask(__name__, template_folder='app/templates', static_url_path="/app/
 server.config.from_object(BaseConfig)
 
 # add the flask html files in templates folder to the site (called blueprints)
-server.register_blueprint(page1_bp)
+server.register_blueprint(jonah_app)
 
 
 # If this python script is the main one being run, start the server.
