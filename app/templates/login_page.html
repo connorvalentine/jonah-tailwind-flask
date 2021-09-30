@@ -78,7 +78,7 @@
 					<!-- a form is how we send user interaction signals to the python files that are running -->
 				<form method= "post">
 					<div class="mb-1 text-center justify-text-center">
-						{{ form.csrf_token }} <! this is necessary for form validation >
+						<!-- {{ form.csrf_token }} <! this is necessary for form validation > -->
 						{{ form.email(
 							class = "w-9/12 px-3 py-2 mb-3 font-mono text-sm leading-tight bg-blue-50 border-2 rounded shadow-md appearance-none focus:outline-none focus:shadow-outline",
 							placeholder="Email")
