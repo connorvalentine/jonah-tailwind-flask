@@ -4,7 +4,7 @@
  - https://desktop.github.com/
 
 ## Clone the Github Repository 
-- https://github.com/connorvalentine/tailwind-flask
+- https://github.com/connorvalentine/jonah-tailwind-flask
 - go to this link, click the green code button, copy and paste the clone link into the app
 - pull any changes to see
 
@@ -26,8 +26,8 @@
 ## Create your virtual environment 
 All instructions from here : https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment 
  - open up a new terminal in VSCode
- - change directory to the github folder (tailwind-flask)
- - into the terminal run the follwing commands while you are in the tailwind-flask folder: 
+ - change directory to the github folder (jonah-tailwind-flask)
+ - into the terminal run the follwing commands while you are in the jonah-tailwind-flask folder: 
 
  1. python3 -m venv env 
     - this creates a clean env folder. It will make a copy of python here that we will use only for this project
