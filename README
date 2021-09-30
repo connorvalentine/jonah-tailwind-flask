@@ -40,12 +40,59 @@ All instructions from here : https://packaging.python.org/guides/installing-usin
 
 ## install tailwind.css 
  - you actually don't need to do this right now because I included the full tailwind in our gtihub repo.
- - first install npm. Which is something I dont really know what it is. Its kinda like pip, but for javascript things. 
 
- npm install -g npm
+ 1.  first install npm. Which is something I dont really know what it is. Its kinda like pip, but for javascript things. 
 
- Now follow the directions in tailwindREADME to get a full copy of tailwind on your machine
-https://tailwindcomponents.com/cheatsheet/
+ 2. run in terminal: npm install -g npm
 
-## 
+ 3. Now follow the directions in tailwindREADME to get a full copy of tailwind on your machine
+
+bookmark this: https://tailwindcomponents.com/cheatsheet/
+
+## What tf is a website
+- There are three parts to a website
+1. HTML
+2. CSS styling information 
+3. something to calculate what happens with user inputs (aka go to next page, change numbers, accept form data)
+
+1. HTML is the structure of any website. It is as old as the internet, and so has some weird quirks. 
+ - every HTML tag starts and ends with <> </>
+ for instance a simple paragraph would be 
+ <p>
+ this is the text of the paragraph
+ </p>
+
+ 2. Styling. Gotta roll in style. This is where .CSS files come into play. There are literally thousands of ways to do this. I am a fan of Tailwind.css. Especially for learning.
+
+ The way tailwind works, we just add as many tailwind classes as we want to the class variable on the html page. 
+
+ Here we make the font mono and the text large.
+
+ <p, class = 'font-mono text-lg'>
+ this is the text of the paragraph
+ </p>
+
+ All the options possible are in the tailwind documentation. Another reason I fucking love tailwind is that the documentation is SUPER rad. Not many projects have this level of advice, example code, and lessons. 
+
+https://tailwindcss.com/docs
+
+ https://tailwindcomponents.com/cheatsheet/
+
+ 3. Something to do calculations for us. This is why we made the app using python. It works kinda frankenstein-like, you can see in flask_app_pages.py we add a form from forms.py into login_page.html. This is to set up a communication channel between the html in the browser and the python code running on the server (which in this case is just your computer lol). You can use javascript too but I don't know how lol.
+
+ ## what tf are all these files in the repository for?
+  1. .gitignore
+      - there are some files we don't want github to save for us (passwords, settings files for vscode, etc). Anything listed in this file will be ignored by github.
+  2. README.txt 
+      - that is this file
+  3. requirements.txt
+      - this is used to install the exact same version of python packages on both our machines
+  4. run_this_to_start_website.py 
+      - running this script will start a local server on your computer to run the website!
+  5. tailwind README
+      - tailwind is weird compared to most .css options. The file size is HUGE (~4 mb).
+      Before putting tailwind onto a real server that would send this code to people's browser you would run the commands in this file, it would automatically search through our .html files and make a new tailwind.css file that ONLY has the css classes that we used. For troubleshooting and design I just leave all the files in place. 
+      - I can explain more about .css files later. For now just know tailwind is unique in that it encourages SO many class names in the html files. Its nice because we have granular control and we can style things right from the html sheets. 
+
+ 
 
