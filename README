@@ -26,7 +26,7 @@
 ## creating a virtual environment ( aka setting up python exactly the same )
 A virtual environment is really important but overlooked and misunderstood a lot. It is simply a folder with a copy of python in it. We can specify the EXACT version of python we are all using along with the versions of all packages. Really good for working in teams.
 
-The following instructions are for windows but the same basic steps will work for mac. Just use equivalent commands from here: https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment
+The following instructions are for windows but the same basic steps will work for mac. Just use equivalent commands from here: https://packaging.python.org/guides/installing-using-ppython3 
 
 Open up a new terminal in VSCode
 Change directory to the github repo (/raposa-website)
