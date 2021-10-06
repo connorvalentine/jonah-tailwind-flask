@@ -1,5 +1,16 @@
 ## How to start the website up
 
+## download VSCode
+  - https://code.visualstudio.com/download 
+
+## download VSCode extensions from the extensions tab
+  - Code Runner
+  - CSS Formatter
+  - CSS Navigation 
+  - Headwind (helps you sort tailwind classes in order automatically)
+  - Tailwind CSS IntelliSense (useful for tailwind options)
+  - Material Icon Theme (code in style)
+  - Dracula Official (code in style)
 ## download Github App 
  - https://desktop.github.com/
 
@@ -12,29 +23,25 @@
  - install it wherever it recommends
  - https://www.python.org/downloads/
 
-## download VSCode
-  - https://code.visualstudio.com/download 
+## creating a virtual environment ( aka setting up python exactly the same )
+A virtual environment is really important but overlooked and misunderstood a lot. It is simply a folder with a copy of python in it. We can specify the EXACT version of python we are all using along with the versions of all packages. Really good for working in teams.
 
-## download VSCode extensions from the extensions tab
-  - Code Runner
-  - CSS Formatter
-  - Headwind (helps you sort tailwind classes in order automatically)
-  - Tailwind CSS IntelliSense (useful for tailwind options)
-  - Material Icon Theme (code in style)
-  - Dracula Official (code in style)
+The following instructions are for windows but the same basic steps will work for mac. Just use equivalent commands from here: https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment
 
-## Create your virtual environment 
-All instructions from here : https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment 
- - open up a new terminal in VSCode
- - change directory to the github folder (jonah-tailwind-flask)
- - into the terminal run the follwing commands while you are in the jonah-tailwind-flask folder: 
+Open up a new terminal in VSCode
+Change directory to the github repo (/raposa-website)
 
- 1. python3 -m venv env 
-    - this creates a clean env folder. It will make a copy of python here that we will use only for this project
- 2. source env/bin/activate
-    - we tell vscode that all python commands will be for our env folder now
- 3. python3 -m pip install -r requirements.txt
-    -  I made a requirements.txt file which we can use to tell python the EXACT packages (add ons) that need to be installed into our python env folder. This way everyone on the team is running exactly the same software. It works nicely.
+Create a new virtual environment by putting this into the terminal
+py -m venv env
+
+Activate the env py running:
+.\env\Scripts\activate
+
+NOTE: If you have never used virtual environments, a command snag is that the windows power shell is not enabled to run scripts.
+Fix here (run windows powershell as administrator and enable scripts): activating virtual environment python
+
+Install all of the required software using the requirements.txt file
+py -m pip install -r requirements.txt
 
 - you are now ready to run python for this project :)
 
@@ -78,7 +85,7 @@ https://tailwindcss.com/docs
 
  https://tailwindcomponents.com/cheatsheet/
 
- 3. Something to do calculations for us. This is why we made the app using python. It works kinda frankenstein-like, you can see in flask_app_pages.py we add a form from forms.py into login_page.html. This is to set up a communication channel between the html in the browser and the python code running on the server (which in this case is just your computer lol). You can use javascript too but I don't know how lol.
+ 3. Something to do calculations for us. This is why we made the app using python. It works kinda frankenstein-like, you can see in flask_app_pages.py we add a form from forms.py into login_page.html. This is to set up a communication channel between the html in the browser and the python code running on the server (which in this case is just your computer lol). You can use javascript too but I don't know how lol. If you ever see <script> code </script>, it is javascript in between the script tags. Javascript can do things like calculate changes, window sizes, and so you can make responsive things happen like animations.
 
  ## what tf are all these files in the repository for?
   1. .gitignore
